@@ -8,9 +8,9 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b) { //eslint-disable-line
-  var sum = a + b;
-  var message = 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.';
+function sum(num1, num2) { //eslint-disable-line
+  var sum = num1 + num2;
+  var message = 'The sum of ' + num1 + ' and ' + num2 + ' is ' + sum + '.';
 
   return [sum, message];
 }
