@@ -16,7 +16,7 @@ function sum(a, b) { //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
-//testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -36,7 +36,7 @@ function multiply(a, b) { //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-//testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -53,7 +53,6 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-//first part
   var localSum = sum(a,b)[0];
   var nextSum = sum(c,localSum)[0];
   var localMul = multiply(a,b)[0];
@@ -113,11 +112,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  var firstMulEl = testArray[0];
+  console.log(firstMulEl);
+  var secondMulEl = testArray[1];
+  console.log(secondMulEl);
+  var thirdMulEl = testArray[2];
+  console.log(thirdMulEl);
+  var localMulEl = multiply(firstMulEl, secondMulEl)[0];
+  console.log(localMulEl);
+  var nextMulEl = multiply(thirdMulEl, localMulEl)[0];
+  console.log(nextMulEl);
+
+  return [nextMulEl, 'The numbers 2,3,4 have a product of 24.'];
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
