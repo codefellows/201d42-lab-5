@@ -52,12 +52,23 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+// function sumAndMultiply(a, b, c) { //eslint-disable-line
+//   var localSum = sum(a,b)[0];
+//   var nextSum = sum(c,localSum)[0];
+//   var localMul = multiply(a,b)[0];
+//   var nextMul = multiply(c,localMul)[0];
+//   var message3 = a + ' and ' + b + ' and ' + c + ' sum to ' + nextSum + '.';
+//   var message4 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + nextMul + '.';
+//   return [nextSum, nextMul, message3, message4];
+// }
+
+// Now for a template literal version of the same:
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   var localSum = sum(a,b)[0];
   var nextSum = sum(c,localSum)[0];
   var localMul = multiply(a,b)[0];
   var nextMul = multiply(c,localMul)[0];
-  var message3 = a + ' and ' + b + ' and ' + c + ' sum to ' + nextSum + '.';
+  var message3 = `${a} and ${b} and ${c} sum to ${nextSum}`;
   var message4 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + nextMul + '.';
   return [nextSum, nextMul, message3, message4];
 }
@@ -152,10 +163,24 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+  //var generateIndex = testDynamicArray.length;
+  //console.log (generateIndex);
+  //cool, that will give me the length of the array within the brackets
+
 
 }
-
+//scratch
+multiply(testDynamicArray);
+console.log(multiply(testDynamicArray));
+// function collapseArray(dynamicArray) {
+//   for (var i = 0; i < testDynamicArray.length; i++) {
+//     multiply(testdynamicArray[i], testDynamicArray[i + 1]);
+//     console.log(collapseArray);
+//   }
+//   collapseArray(testDynamicArray);
+//scratch
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
+//
